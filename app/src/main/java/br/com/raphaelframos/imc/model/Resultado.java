@@ -4,6 +4,9 @@ import android.graphics.drawable.Drawable;
 
 import androidx.annotation.NonNull;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class Resultado {
 
     private double imc;
@@ -11,8 +14,9 @@ public class Resultado {
     private String oQuePodeAcontecer;
     private Drawable imagem;
 
-    public double getImc() {
-        return imc;
+    public String getImc() {
+        NumberFormat formatter = new DecimalFormat("#0.00");
+        return formatter.format(imc);
     }
 
     public void setImc(double imc) {

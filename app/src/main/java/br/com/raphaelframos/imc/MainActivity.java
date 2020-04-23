@@ -19,8 +19,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextPeso;
     private EditText editTextAltura;
     private Button buttonCalcular;
-    private TextView textViewResultado;
+    private TextView textViewImc;
     private ImageView imageViewResultado;
+    private TextView textViewLabelImc;
+    private TextView textViewClassificacao;
+    private TextView textViewConsequencia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +50,18 @@ public class MainActivity extends AppCompatActivity {
         editTextAltura = findViewById(R.id.editTextAltura);
         editTextPeso = findViewById(R.id.editTextPeso);
         buttonCalcular = findViewById(R.id.buttonCalcular);
-        textViewResultado = findViewById(R.id.textViewResultado);
+        textViewImc = findViewById(R.id.textViewImc);
         imageViewResultado = findViewById(R.id.imageViewResultado);
+        textViewLabelImc = findViewById(R.id.textViewLabelImc);
+        textViewClassificacao = findViewById(R.id.textViewClassificacao);
+        textViewConsequencia = findViewById(R.id.textViewConsequencia);
     }
 
     private void mostraResultado(Resultado resultado) {
-        textViewResultado.setText(resultado.toString());
+        textViewLabelImc.setVisibility(View.VISIBLE);
+        textViewImc.setText(resultado.getImc());
+        textViewConsequencia.setText(resultado.getoQuePodeAcontecer());
+        textViewClassificacao.setText(resultado.getClassificacao());
         imageViewResultado.setImageDrawable(resultado.getImagem());
     }
 

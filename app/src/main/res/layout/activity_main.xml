@@ -37,11 +37,58 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Button>
 
-    <TextView
-        android:layout_margin="20dp"
-        android:id="@+id/textViewResultado"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></TextView>
+        android:layout_height="wrap_content">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewLabelImc"
+                android:visibility="gone"
+                android:text="IMC = "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/textViewImc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewLabelClassificacao"
+                android:text="Classificação = "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/textViewClassificacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewLabelConsequencia"
+                android:text="O que pode acontecer = "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/textViewConsequencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </TableRow>
+
+    </TableLayout>
+
+
 
     <ImageView
         android:id="@+id/imageViewResultado"
