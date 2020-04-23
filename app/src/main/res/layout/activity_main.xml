@@ -37,5 +37,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></Button>
 
+    <TextView
+        android:layout_margin="20dp"
+        android:id="@+id/textViewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <ImageView
+        android:id="@+id/imageViewResultado"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dp"
+        android:layout_height="200dp"></ImageView>
+
 
 </LinearLayout>
